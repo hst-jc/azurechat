@@ -40,8 +40,9 @@ export const PersonaDetail: FC<Props> = (props) => {
 
             <div className="grid gap-2 flex-1 ">
               <Label htmlFor="personaMessage">Personality</Label>
-              <div className="whitespace-pre-wrap">{`${CHAT_DEFAULT_SYSTEM_PROMPT}`}</div>
-              <div className="whitespace-pre-wrap">{`${personaMessage}`}</div>
+              <div className="whitespace-pre-wrap">
+                {personaMessage || CHAT_DEFAULT_SYSTEM_PROMPT}
+              </div>
             </div>
           </div>
         </ScrollArea>
